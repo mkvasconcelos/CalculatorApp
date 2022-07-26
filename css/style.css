@@ -1,9 +1,33 @@
 body {
-    padding: 20rem;
+    text-align: center;
+    background-color: #3B4664;
+}
+
+.visor {
+    background-color: #181F32;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: #FCFFFF;
+}
+
+.buttons {
+    background-color: #252D44;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 1%;
+}
+
+.button {
+    border-radius: 18%;
+    width: 3rem;
+}
+
+#buttonZero {
+    width: 6.4rem;
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        background-color: lightblue;
+        background-color: red;
     }
 }

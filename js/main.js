@@ -14,14 +14,12 @@ function division(a, b) {
     return a / b
 }
 
-function square(a) {
-    return a ** 2
+function inverse(a) {
+    return -a
 }
 
-function potentiation(a, b) {
-    return a * b
+function percentage(a) {
+    return a / 100
 }
 
-function squareRoot(a) {
-    return a ** 0.5
-}
+
