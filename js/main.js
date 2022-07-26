@@ -3,9 +3,18 @@ let number1 = 0
 let number2 = 0
 
 function button(button) {
+    if (button === "." && document.getElementById("display").innerHTML.indexOf(".") != -1) {
+        return
+    }
     if (operator === 0) {
         if (document.getElementById("display").innerHTML == 0) {
-            document.getElementById("display").innerHTML = button
+            if (button === ".") {
+                document.getElementById("display").innerHTML = "0."
+            } else {
+                document.getElementById("display").innerHTML = button
+            }
+        } else if (document.getElementById("display").innerHTML === "0.") {
+            document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
         } else {
             document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
         }
@@ -33,6 +42,9 @@ function oper(oper) {
 }
 
 function result(num1, num2, oper) {
+    if (oper == 0) {
+        return
+    }
     answer = eval(num1 + oper + num2)
     document.getElementById("display").innerHTML = answer
     operator = 0
