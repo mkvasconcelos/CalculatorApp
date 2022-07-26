@@ -1,6 +1,8 @@
 let operator = 0
 let number1 = 0
 let number2 = 0
+let answer = 0
+let clicks = 0
 
 function button(button) {
     if (button === "." && document.getElementById("display").innerHTML.indexOf(".") != -1) {
@@ -10,26 +12,37 @@ function button(button) {
         if (document.getElementById("display").innerHTML == 0) {
             if (button === ".") {
                 document.getElementById("display").innerHTML = "0."
+            } else if (document.getElementById("display").innerHTML.indexOf(".") != -1) {
+                document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
             } else {
                 document.getElementById("display").innerHTML = button
             }
-        } else if (document.getElementById("display").innerHTML === "0.") {
-            document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
         } else {
             document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
         }
     } else {
-        document.getElementById("display").innerHTML = button
+        if (clicks == 0) {
+            if (button === ".") {
+                document.getElementById("display").innerHTML = "0."
+            } else if (document.getElementById("display").innerHTML.indexOf(".") != -1) {
+                document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
+            } else {
+                document.getElementById("display").innerHTML = button
+            }
+        } else {
+            document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
+        }
     }
-    // document.getElementById("display").innerHTML = button
     number2 = document.getElementById("display").innerHTML
-    return number2
+    answer = 0
+    clicks += 1
+    return number2, answer
 }
 
-function prevButton() {
-    number1 = document.getElementById("display").innerHTML
-    return number1
-}
+// function prevButton() {
+//     number1 = document.getElementById("display").innerHTML
+//     return number1
+// }
 
 function oper(oper) {
     if (operator === 0) {
@@ -38,7 +51,9 @@ function oper(oper) {
         result(number1, number2, operator)
         operator = oper
     }
-    return operator
+    number1 = number2
+    clicks = 0
+    return operator, clicks
 }
 
 function result(num1, num2, oper) {
@@ -48,7 +63,7 @@ function result(num1, num2, oper) {
     answer = eval(num1 + oper + num2)
     document.getElementById("display").innerHTML = answer
     operator = 0
-    return operator
+    return operator, answer
 }
 
 function inverse() {
@@ -61,6 +76,6 @@ function percentage() {
 
 function reset() {
     document.getElementById("display").innerHTML = 0
-    number1, number2, operator = 0, 0, 0
-    return number1, number2, operator
+    number1, number2, operator, clicks = 0, 0, 0
+    return number1, number2, operator, clicks
 }
