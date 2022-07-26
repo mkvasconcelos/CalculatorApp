@@ -14,39 +14,29 @@
         <div>
             <p>calc</p>
         </div>
-        <div class="visor">
-            <p>visor</p>
+        <div class="display" id="display">
+            0
         </div>
-        <div class="buttons">
-            <div id="firstLine">
-                <button class="button">C</button>
-                <button class="button">+/-</button>
-                <button class="button">%</button>
-                <button class="button">/</button>
-            </div>
-            <div id="secondLine">
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">x</button>
-            </div>
-            <div id="thirdLine">
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">-</button>
-            </div>
-            <div id="fourthLine">
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">+</button>
-            </div>
-            <div id="fifthLine">
-                <button class="button" id="buttonZero">0</button>
-                <button class="button">,</button>
-                <button class="button">=</button>
-            </div>
+        <div class="button-container">
+            <button class="button" onclick="reset()">C</button>
+            <button class="button" onclick="inverse()">+/-</button>
+            <button class="button" onclick="percentage()">%</button>
+            <button class="button" onclick="oper(this.value)" value="/">/</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=7>7</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=8>8</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=9>9</button>
+            <button class="button" onclick="oper(this.value)" value="*">x</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=4>4</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=5>5</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=6>6</button>
+            <button class="button" onclick="oper(this.value)" value="-">-</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=1>1</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=2>2</button>
+            <button class="button" onclick="prevButton();button(this.value)" value=3>3</button>
+            <button class="button" onclick="oper(this.value)" value="+">+</button>
+            <button class="button" id="buttonZero" onclick="prevButton();button(this.value)" value=0>0</button>
+            <button class="button">.</button>
+            <button class="button" onclick="result(number1, number2, operator)">=</button>
         </div>
     </div>
 </body>

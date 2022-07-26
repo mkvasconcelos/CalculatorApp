@@ -3,14 +3,17 @@ body {
     background-color: #3B4664;
 }
 
-.visor {
+.display {
     background-color: #181F32;
     margin-left: 25%;
     margin-right: 25%;
     color: #FCFFFF;
+
 }
 
-.buttons {
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     background-color: #252D44;
     margin-left: 25%;
     margin-right: 25%;
