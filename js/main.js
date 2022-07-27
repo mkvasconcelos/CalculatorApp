@@ -17,31 +17,6 @@ function button(button) {
     } else {
         document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
     }
-    // if (operator === 0) {
-    //     if (document.getElementById("display").innerHTML == 0) {
-    //         if (button === ".") {
-    //             document.getElementById("display").innerHTML = "0."
-    //         } else if (document.getElementById("display").innerHTML.indexOf(".") != -1) {
-    //             document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
-    //         } else {
-    //             document.getElementById("display").innerHTML = button
-    //         }
-    //     } else {
-    //         document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
-    //     }
-    // } else {
-    //     if (clicks == 0) {
-    //         if (button === ".") {
-    //             document.getElementById("display").innerHTML = "0."
-    //         } else if (document.getElementById("display").innerHTML.indexOf(".") != -1) {
-    //             document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
-    //         } else {
-    //             document.getElementById("display").innerHTML = button
-    //         }
-    //     } else {
-    //         document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.concat(button)
-    //     }
-    // }
     number2 = document.getElementById("display").innerHTML
     answer = 0
     clicks += 1

@@ -3,31 +3,153 @@ body {
     background-color: #3B4664;
 }
 
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 1.2;
+}
+
 .display {
     background-color: #181F32;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: auto;
+    width: 450px;
+    height: 50px;
+    padding: 10px;
+    text-align: end;
     color: #FCFFFF;
-
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .button-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 50px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     background-color: #252D44;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 1%;
+    padding: 10px;
+    justify-content: center;
+    width: 450px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 .button {
-    border-radius: 18%;
-    width: 3rem;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FBFFFF;
 }
 
-#buttonZero {
-    width: 6.4rem;
+
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
 }
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.div5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div6 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div7 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.div8 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.div9 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.div10 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div11 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.div12 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.div13 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.div14 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.div15 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.div16 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.div17 {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+.div18 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.div19 {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.buttonColor1 {
+    background-color: #EAE3DB;
+    color: #3B4252;
+    box-shadow: -3px 3px #B2A295, -2px 2px #B2A295, -1px 1px #B2A295;
+    border: 1px solid #B2A295;
+}
+
+.buttonColor2 {
+    background-color: #F96C5B;
+    box-shadow: -3px 3px #7A2B27, -2px 2px #7A2B27, -1px 1px #7A2B27;
+    border: 1px solid #7A2B27;
+}
+
+.buttonColor3 {
+    background-color: #A3B4DF;
+    box-shadow: -3px 3px #414E6E, -2px 2px #414E6E, -1px 1px #414E6E;
+    border: 1px solid #414E6E;
+}
+
+
+#buttonZero {
+    width: 210px;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     body {
