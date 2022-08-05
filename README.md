@@ -2,7 +2,7 @@
 
 ## About
 <p>
-    It was my thir front-end project that I developed, I used HTML, CSS and JAVASCRIPT to build a calculator. 
+    It was my third front-end project that I developed, I used HTML, CSS and JAVASCRIPT to build a calculator. 
 </p>
 
 <p align="center">
